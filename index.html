@@ -1,16 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coderhouse Brasil</title>
+    <meta name="description" content="Ensinar fazendo é o que nos motiva">
+    <meta name="keywords" content="tecnologia, curso de tecnologia, html, css, javascript">
+
+    <!-- Google fonts (pre-connect) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://www.coderhouse.com.br/imgs/ch.svg" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <title>Coderhouse Brasil | Aprender fazendo</title>
 </head>
+
 <body>
-    <!-- cabecalhos -->
-    <h1>1 Seres vivos</h1>
-    <h2>1.1 Reino animal</h2>
-    <h3>1.1.1 Vertebrados</h3>
-    <p>Olá <b>[texto em negrito]</b> <b><i>[texto em negrito e itálico]</i></b></p>
+    <!-- menu -->
+    <header class="main-menu">
+        <div class="wrapper-menu">
+            <h1>Pizzaria do Allan</h1>
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="#">Página inicial</a>
+                    </li>
+                    <li>
+                        <a href="./pages/cardapio.html">
+                            Cardápio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./pages/contato.html">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- conteudo principal -->
+    <main>
+        <div class="carregamento"></div>
+        <input type="text" placeholder="Exemplo de foco..." class="exemplo-input">
+        <p class="exemplo-paragrafo"></p>
+
+        <p>Olá <b>[texto em negrito]</b> <b><i>[texto em negrito e itálico]</i></b></p>
+
+        <ul>
+            <li>1 pacote de macarrão instantâneo</li>
+            <li>Tomate, manjericão</li>
+        </ul>
+        <ol>
+            <li>Em uma panela, aqueça 300mL de água</li>
+            <li>Após a fervura...</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+
+        <dl>
+            <dt>HTML</dt>
+            <dd>HTML é uma linguagem de marcação de hipertexto</dd>
+        </dl>
+
+        <ul>
+            <li>item 1
+                <ul>
+                    <li>item 1.1</li>
+                </ul>
+            </li>
+            <li>item 2</li>
+        </ul>
+
+        <dl>
+            <dt>Sapo Pipa</dt>
+            <dd>
+                <i>O sapo-pipa vive nos pântanos da região amazônica</i>
+            </dd>
+            <dt>Sapo Malaio</dt>
+            <dd>O sapo malaio tem três chifres, um em cima de cada olho</dd>
+        </dl>
+
+        <div class="exemplo"></div>
+
+        <table border>
+            <!-- cabecalho da tabela -->
+            <thead>
+                <th>Número</th>
+                <th>Nome</th>
+                <th>Nota</th>
+            </thead>
+
+            <!-- restante das celulas -->
+            <tr>
+                <td>01</td>
+                <td>Allan Kildare</td>
+                <td>7,8</td>
+            </tr>
+
+            <tr>
+                <td>02</td>
+                <td>Lucas Silva</td>
+                <td>9,9</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Marcos Silva</td>
+                <td>9,9</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>Alice Silva</td>
+                <td>9,9</td>
+            </tr>
+        </table>
+
+        <table border>
+            <thead>
+                <th>Frutas</th>
+                <th>Verduras</th>
+                <th>Grãos</th>
+            </thead>
+
+            <tr>
+                <td>Maçã</td>
+                <td>Alface</td>
+                <td>Amendoim</td>
+            </tr>
+
+            <tr>
+                <td>Laranja</td>
+                <td>Beterraba</td>
+                <td>Trigo</td>
+            </tr>
+        </table>
+
+        <form>
+            <fieldset>
+                <legend>Primeiro formulário:</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome">
+
+                <div>
+                    <input type="radio" name="trimestre" value="Primeiro trimestre" id="primeiroTri">
+                    <label for="primeiroTri">Primeiro trimestre</label>
+
+                    <input type="radio" name="trimestre" value="Segundo trimestre" id="segundoTri">
+                    <label for="segundoTri">Segundo trimestre</label>
+
+                    <input type="radio" name="trimestre" value="Terceiro trimestre" id="terceiroTri">
+                    <label for="terceiroTri">Terceiro trimestre</label>
+                </div>
+
+                <select name="estado" id="">
+                    <option selected="true" disabled="true">Selecione seu estado</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </select>
+
+                <br>
+
+                <input type="checkbox" id="termos">
+                <label for="termos">Eu declaro que aceito os termos de condições</label>
+                <br>
+                <button type="reset">Limpar formulário</button>
+            </fieldset>
+
+        </form>
+    </main>
+
+    <!-- tag aberta / self-closing -->
+    <img src="./images/computer-speaker-and-desktop-setup-picjumbo-com.jpg" style="width: 400px"
+        alt="Tela de computador sobre a mesa junto a um alto falante">
+
+    <div class="flex-container" style="width: 100%">
+        <button class="btn-gradiente">Teste aqui seu gradiente</button>
+        <div class="gradiente"></div>
+        <div class="caixa gradiente-1"></div>
+        <div class="caixa gradiente-2"></div>
+        <div class="caixa gradiente-3"></div>
+        <div class="caixa gradiente-4"></div>
+        <div class="caixa gradiente-5"></div>
+        <div class="caixa gradiente-6"></div>
+        <div class="caixa gradiente-7"></div>
+                <!--      transformacao-1 -->
+        <div class="caixa transformacao-1"></div>
+        <div class="caixa transformacao-2"></div>
+    </div>
+
+    
+
+    <!-- <iframe width="684" height="385" src="https://www.youtube.com/embed/SsKT0s5J8ko" title="Mac Miller - Self Care" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+    <!-- rodape -->
+    <footer>
+        <p>Alguns direitos reservados - 2023</p>
+        <a href="https://www.coderhouse.com.br" target="_blank" rel="noopener noreferrer">Coderhouse Brasil</a>
+    </footer>
 </body>
+
 </html>
