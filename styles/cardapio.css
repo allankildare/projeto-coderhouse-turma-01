@@ -1,0 +1,43 @@
+.desafio1 {
+    color: blue;
+}
+
+#lista1 {
+    list-style: georgian !important;
+}
+
+.lista-um {
+    list-style-type: disc;
+}
+
+#lista2 {
+    list-style: square;
+}
+
+/* teste de cascata */
+.teste-de-cascata {
+    color: red;
+}
+
+/* teste de cascata */
+.teste-de-cascata {
+    color: green;
+}
+
+.teste-de-cascata {
+    color: blue;
+}
+
+.box-model {
+    display: block;
+    border: 3px solid black;
+    width: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+.box-model--retirarMargem {
+    margin-right: 0;
+}

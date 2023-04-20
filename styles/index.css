@@ -1,0 +1,232 @@
+:root {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-menu {
+    background: #c84322;
+    /* position: fixed;
+    width: 100%; */
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
+}
+
+.main-menu .wrapper-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 1.5rem;
+}
+
+.main-menu .navigation {
+    /* padding:  */
+    /* padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+    padding-left: 20px; */
+    /* margin: 16px 4px 24px 8px; */
+}
+
+.main-menu .navigation ul {
+    display: flex;
+    list-style: none;
+    font-size: 24px;
+}
+.main-menu .navigation ul > li {
+    margin-right: 1rem;
+}
+
+.main-menu .navigation ul > li:last-child {
+    margin-right: 0;
+}
+/* focus */
+.main-menu .navigation ul a, .main-menu .navigation ul a:visited {
+    color: rgb(244, 244, 244);
+}
+
+.main-menu .navigation ul a:hover {
+    color: rgb(222, 222, 222);
+}
+
+.main-menu .navigation ul a:active {
+    color: rgb(143, 143, 143);
+}
+
+.main-menu .navigation ul > li:nth-child(2n+2) {
+    background-color: #e3cf17;
+}
+
+.exemplo {
+    border: 4px solid blue;
+    background-color: #e3cf17;
+    width: 100px;
+    height: 100px;
+    margin: 1rem auto;
+}
+
+.exemplo-input:focus {
+    border: 4px solid purple;
+    outline: none;
+}
+
+.exemplo-input {
+    padding: 6px 10px;
+}
+
+.exemplo-input::placeholder {
+    color: purple;
+    font-weight: 600;
+}
+
+.exemplo-paragrafo::after {
+    content: 'Início';
+    position: relative;
+    right: 30px;
+    top: 12px;
+    color:rgb(28, 21, 217);
+}
+.exemplo-paragrafo::before {
+    color: purple;
+    content: 'Início';
+}
+
+.btn-gradiente {
+    padding: 6px 8px;
+    background-image: linear-gradient(45deg, red, yellow, blue);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gradiente {
+    width: 200px;
+    height: 200px;
+    border: 2px dotted black;
+    background-image: radial-gradient(rgb(34, 36, 153), rgb(71, 70, 70));
+}
+
+.caixa {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin-bottom: 4px;
+}
+
+.gradiente-1 {
+    background-image: linear-gradient(to top, red, yellow);
+}
+
+.gradiente-1:hover {
+    transform: rotate(30deg)
+}
+
+.gradiente-2 {
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+.gradiente-2:hover {
+    transform: rotateX(30deg)
+}
+
+.gradiente-3 {
+    background-image: linear-gradient(to bottom, red, yellow);
+}
+
+.gradiente-3:hover {
+    transform: rotateY(30deg)
+}
+
+.gradiente-4 {
+    background-image: linear-gradient(to left, red, yellow);
+}
+.gradiente-4:hover {
+    transform: rotateZ(-30deg)
+}
+
+.gradiente-5 {
+    background-image: linear-gradient(37deg, red, yellow);
+}
+
+.gradiente-5:hover {
+    transform: translate(30px, 10px);
+}
+
+.gradiente-6 {
+    background-image: radial-gradient(red, yellow);
+}
+
+.gradiente-6:hover {
+    transform: scale(0.9, 0.5);
+}
+
+.gradiente-7 {
+    background-image: radial-gradient(red, yellow);
+    margin-left: 80px;
+}
+.gradiente-7:hover {
+    transform: skew(-10, -20deg);
+}
+
+.transformacao-1 {
+    background-color: #c84322;
+    transition: transform 1s;
+
+}
+
+.transformacao-1:hover {
+    transform: scale(1.1);
+}
+
+.transformacao-2 {
+    background-color: #c84322;
+    transition: background-color .6s;
+}
+
+.transformacao-2:hover {
+    background-color: #1864a7;
+}
+
+.carregamento {
+    width: 100px;
+    height: 100px;
+    border: 8px solid rgba(26, 105, 232, 0.641);
+    border-right: 8px solid transparent;
+    border-radius: 50%;
+    margin-left: 30px;
+    animation: girar 2s infinite ease;
+    animation-delay: 5s;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-menu .wrapper-menu {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-menu .navigation ul {
+        flex-direction: column;
+        align-items: center;
+        font-size: 28px;
+    }
+
+    .main-menu .navigation ul > li {
+        margin-right: 0;
+    }
+}
+
+@keyframes girar {
+    from {} to {
+        transform: rotate(360deg);
+    }
+}

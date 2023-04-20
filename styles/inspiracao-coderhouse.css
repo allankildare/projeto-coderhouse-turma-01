@@ -1,0 +1,31 @@
+body {
+    color: #fafafa;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80px 9fr;
+    grid-template-rows: 80px 9fr;
+    grid-template-areas:
+        "menu logo"
+        "menu conteudo";
+
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #212121;
+    border-right: 2px solid #797979;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: #212121;
+    border-bottom: 2px solid #797979;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    background-color: #212121;
+}
