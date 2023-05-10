@@ -8,13 +8,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fafafa;
+}
+
 .main-menu {
     background: #c84322;
-    /* position: fixed;
-    width: 100%; */
-    /* display: flex;
-    justify-content: center; */
-    /* align-items: center; */
 }
 
 .main-menu .wrapper-menu {
@@ -24,15 +23,6 @@
     margin: 0 auto;
     max-width: 1440px;
     padding: 0 1.5rem;
-}
-
-.main-menu .navigation {
-    /* padding:  */
-    /* padding-top: 4px;
-    padding-bottom: 4px;
-    padding-right: 20px;
-    padding-left: 20px; */
-    /* margin: 16px 4px 24px 8px; */
 }
 
 .main-menu .navigation ul {
@@ -62,6 +52,10 @@
 
 .main-menu .navigation ul > li:nth-child(2n+2) {
     background-color: #e3cf17;
+}
+
+.container {
+    padding: 0 1.5rem;
 }
 
 .exemplo {
