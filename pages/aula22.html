@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de API</title>
+</head>
+<body>
+    
+</body>
+<script>
+const request = new XMLHttpRequest()
+
+request.addEventListener('load', () => {
+    const response = JSON.parse(request.responseText)
+    const status = request.status
+    
+    console.log()
+    console.log(status);
+
+    // checar se a resposta é 200 (OK - sucesso)
+    if (status === 200) {
+        // consultar onde se encontra nome e sobrenome
+        const user = response.results[0]
+        const nome = user.name.first
+        const sobrenome = user.name.last
+        const nomeCompleto = `${nome} ${sobrenome}`
+
+        // criar um paragrafo
+        const paragrafo = document.createElement('p')
+        paragrafo.className = 'nome-completo'
+        paragrafo.textContent = nomeCompleto
+
+        // colocar o nome e sobrenome dentro do paragrafo
+        document.querySelector('body').appendChild(paragrafo)
+    }
+
+})
+
+request.open('GET', 'https://randomuser.me/api/')
+request.send()
+</script>
+</html>
