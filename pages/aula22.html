@@ -15,9 +15,6 @@ const request = new XMLHttpRequest()
 request.addEventListener('load', () => {
     const response = JSON.parse(request.responseText)
     const status = request.status
-    
-    console.log()
-    console.log(status);
 
     // checar se a resposta é 200 (OK - sucesso)
     if (status === 200) {
@@ -40,5 +37,23 @@ request.addEventListener('load', () => {
 
 request.open('GET', 'https://randomuser.me/api/')
 request.send()
+
+const requestCountry = new XMLHttpRequest()
+
+requestCountry.open('GET', 'https://restcountries.com/v3.1/name/iceland')
+requestCountry.send()
+
+requestCountry.onreadystatechange = () => {
+    if (requestCountry.status === 200 && requestCountry.readyState === 4) {
+        const response = JSON.parse(requestCountry.response)
+        const bandeira = response[0].flags.png
+
+        const imgBandeira = document.createElement('img')
+        imgBandeira.src = bandeira
+        imgBandeira.alt = response[0].flags.alt
+
+        document.querySelector('body').appendChild(imgBandeira)
+    }
+}
 </script>
 </html>
